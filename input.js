@@ -3,6 +3,8 @@
  * Specifically, so that we can handle user input via stdin
  */
 
+const phraseOne = require('./constants');
+
 let connection;
 
 const handleUserInput = function(data) {
@@ -21,6 +23,9 @@ const handleUserInput = function(data) {
     break;
   case 'd':
     connection.write('Move: right');
+    break;
+  case '1':
+    connection.write(`Say: ${phraseOne}`);
     break;
   }
 };
